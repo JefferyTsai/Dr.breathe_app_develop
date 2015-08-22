@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Dr_BreatheApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_information">INFORMATION</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_setting">Setting</string>
+    <string name="title_activity_coarse">Coarse</string>
+    <string name="title_activity_infor">Infor</string>
+	
+	<string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string-array name="drawer_menu">
+        <item>重新開始</item>
+		<item>訓練課程表</item>
+		<item>制定課程表</item>
+        <item>提醒</item>
+        <item>成績</item>
+        <item>匯出</item>
+    </string-array>
+    
+    <string name="action_refresh">重新整理</string>
+    <string name="action_edit">編輯</string>
+    <string name="action_search">搜尋</string>
+    <string name="action_info">軟體資訊</string>
+</resources>
