@@ -11,20 +11,10 @@ import android.widget.ImageButton;
 public class Infor extends ActionBarActivity {
 
     private ImageButton myHeadPhotoImageButton;
-    private Button myNameButton;
-    private Button myWeightAndHeightButton;
-    private Button myBirthdayButton;
-    private Button myGenderButton;
-    private Button myEmailButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_infor);
-        myNameButton = (Button)findViewById(R.id.nameButton);
-        myWeightAndHeightButton = (Button)findViewById(R.id.bwAndBhButton);
-        myBirthdayButton = (Button)findViewById(R.id.birthdayButton);
-        myGenderButton = (Button)findViewById(R.id.genderButton);
-        myEmailButton = (Button)findViewById(R.id.emailButton);
     }
 
     @Override
