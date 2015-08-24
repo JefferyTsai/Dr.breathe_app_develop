@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 
-public class Course extends Activity {
+public class Course_Exercise extends Activity {
     private DrawerLayout layDrawer;
     private ListView lstDrawer;
 
@@ -29,7 +28,7 @@ public class Course extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course);
+        setContentView(R.layout.activity_exercise);
 
         // initActionBar();
         initDrawer();
@@ -70,7 +69,7 @@ public class Course extends Activity {
         getActionBar().setHomeButtonEnabled(true);
     }
     private void initDrawer(){
-        setContentView(R.layout.activity_course);
+        setContentView(R.layout.activity_exercise);
 
         layDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         lstDrawer = (ListView) findViewById(R.id.left_drawer);

@@ -25,4 +25,5 @@
     <string name="action_edit">編輯</string>
     <string name="action_search">搜尋</string>
     <string name="action_info">軟體資訊</string>
+    <string name="title_activity_course__table">Course_Table</string>
 </resources>
