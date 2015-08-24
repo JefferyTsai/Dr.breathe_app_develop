@@ -38,6 +38,8 @@
                 android:ems="11"
                 android:inputType="textPersonName"
                 android:layout_marginLeft="20sp"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/weightEditText"
                 />
         </TableRow>
     </TableLayout>
@@ -105,6 +107,8 @@
                 android:ems="4"
                 android:inputType="numberSigned"
                 android:layout_marginLeft="20sp"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/heightEditText"
                 />
             <TextView
                 android:text="/"
@@ -145,6 +149,7 @@
                 android:textSize="20sp"
                 android:ems="8"
                 android:layout_marginLeft="20sp"
+                android:id="@+id/birthdayEditText"
                 />
         </TableRow>
     </TableLayout>
