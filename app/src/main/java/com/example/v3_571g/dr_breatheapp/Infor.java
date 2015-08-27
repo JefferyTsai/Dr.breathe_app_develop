@@ -1,9 +1,14 @@
 package com.example.v3_571g.dr_breatheapp;
 
+import android.app.ActionBar;
 import android.app.DatePickerDialog;
+import android.app.LocalActivityManager;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TabHost;
 
 import java.util.Calendar;
 
@@ -24,6 +30,10 @@ public class Infor extends ActionBarActivity {
     private EditText myBirthdayEditText;
     private EditText myEmailEditText;
     private int birthdayYear, birthdayMonth, birthdayDay;
+
+    private Button myInfoButton, myHistoryButton, myCourseButton, mySettingButton;
+    /*private TabHost myTabHost;
+    LocalActivityManager lam;*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +52,41 @@ public class Infor extends ActionBarActivity {
                 showDatePickerDialog();
             }
         });
+
+        myInfoButton = (Button)findViewById(R.id.infoButton);
+        myHistoryButton = (Button)findViewById(R.id.historyButton);
+        myCourseButton = (Button)findViewById(R.id.courseButton);
+        mySettingButton = (Button)findViewById(R.id.settingButton);
+//originally like to using tabHost implement, fail
+        /*myTabHost = (TabHost)findViewById(R.id.tabHost);
+        lam = new LocalActivityManager(this, false);
+        myTabHost.setup(lam);
+        lam.dispatchCreate(savedInstanceState);
+        Intent intent;
+
+        intent = new Intent().setClass(this, Infor.class);
+        TabHost.TabSpec tabSpec1 = myTabHost.newTabSpec("tab1");
+        tabSpec1.setIndicator("Infor", ContextCompat.getDrawable(this, R.drawable.ic_drawer));
+        tabSpec1.setContent(intent);
+        myTabHost.addTab(tabSpec1);
+
+        intent = new Intent().setClass(this, History.class);
+        TabHost.TabSpec tabSpec2 = myTabHost.newTabSpec("tab2");
+        tabSpec2.setIndicator("History", ContextCompat.getDrawable(this, R.drawable.ic_launcher));
+        tabSpec2.setContent(intent);
+        myTabHost.addTab(tabSpec2);
+
+        intent = new Intent().setClass(this, Course_Table.class);
+        TabHost.TabSpec tabSpec3 = myTabHost.newTabSpec("tab3");
+        tabSpec3.setIndicator("Course", ContextCompat.getDrawable(this, R.drawable.ic_launcher));
+        tabSpec3.setContent(intent);
+        myTabHost.addTab(tabSpec3);
+
+        intent = new Intent().setClass(this, Setting.class);
+        TabHost.TabSpec tabSpec4 = myTabHost.newTabSpec("tab4");
+        tabSpec4.setIndicator("Setting", ContextCompat.getDrawable(this, R.drawable.ic_launcher));
+        tabSpec4.setContent(intent);
+        myTabHost.addTab(tabSpec4);*/
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,6 +110,18 @@ public class Infor extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //lam.dispatchPause(isFinishing());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //lam.dispatchResume();
+    }
+
     public void showDatePickerDialog(){
         final Calendar c = Calendar.getInstance();
         birthdayYear = c.get(Calendar.YEAR);
@@ -75,7 +132,7 @@ public class Infor extends ActionBarActivity {
                 new DatePickerDialog.OnDateSetListener(){
                     public void onDateSet(DatePicker View, int year, int month, int dayOfMonth){
                         myBirthdayEditText.setText(String.valueOf(year)+"/"
-                                +String.valueOf(month)+"/"
+                                +String.valueOf(month+1)+"/"
                                 +String.valueOf(dayOfMonth));
 
                     }

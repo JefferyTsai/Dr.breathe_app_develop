@@ -180,5 +180,89 @@
         </TableRow>
 
     </TableLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="320sp"
+            android:layout_height="80sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:text="Info"
+                android:id="@+id/infoButton"
+                android:textSize="16sp"
+                android:padding="0sp"
+                android:background="@drawable/round"/>
+
+            <Button
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:text="history"
+                android:id="@+id/historyButton"
+                android:textSize="16sp"
+                android:padding="0sp"
+                android:background="@drawable/round"/>
+
+
+            <Button
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:text="course"
+                android:id="@+id/courseButton"
+                android:textSize="16sp"
+                android:padding="0sp"
+                android:background="@drawable/round"/>
+
+            <Button
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:text="setting"
+                android:id="@+id/settingButton"
+                android:textSize="16sp"
+                android:padding="0sp"
+                android:background="@drawable/round"/>
+
+            </LinearLayout>
+    </RelativeLayout>
+
+    <!--
+        <TabHost
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/tabHost"
+            android:layout_below="@+id/emailTableLayout"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"></TabWidget>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </TabHost>
+    -->
 
 </RelativeLayout>
