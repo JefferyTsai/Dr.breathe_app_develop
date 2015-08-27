@@ -198,7 +198,7 @@
                 android:id="@+id/infoButton"
                 android:textSize="16sp"
                 android:padding="0sp"
-                android:background="@drawable/round"/>
+                android:background="@drawable/round_left"/>
 
             <Button
                 android:layout_width="80sp"
@@ -207,7 +207,7 @@
                 android:id="@+id/historyButton"
                 android:textSize="16sp"
                 android:padding="0sp"
-                android:background="@drawable/round"/>
+                android:background="@drawable/hotkey_purple_pink_background"/>
 
 
             <Button
@@ -217,7 +217,7 @@
                 android:id="@+id/courseButton"
                 android:textSize="16sp"
                 android:padding="0sp"
-                android:background="@drawable/round"/>
+                android:background="@drawable/hotkey_purple_pink_background"/>
 
             <Button
                 android:layout_width="80sp"
@@ -226,7 +226,7 @@
                 android:id="@+id/settingButton"
                 android:textSize="16sp"
                 android:padding="0sp"
-                android:background="@drawable/round"/>
+                android:background="@drawable/round_right"/>
 
             </LinearLayout>
     </RelativeLayout>

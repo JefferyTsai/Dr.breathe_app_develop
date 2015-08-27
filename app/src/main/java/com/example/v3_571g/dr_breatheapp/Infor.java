@@ -3,6 +3,7 @@ package com.example.v3_571g.dr_breatheapp;
 import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.app.LocalActivityManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
@@ -57,6 +58,10 @@ public class Infor extends ActionBarActivity {
         myHistoryButton = (Button)findViewById(R.id.historyButton);
         myCourseButton = (Button)findViewById(R.id.courseButton);
         mySettingButton = (Button)findViewById(R.id.settingButton);
+
+        setHotKey(myHistoryButton, this, History.class);
+        setHotKey(myCourseButton, this, Course_Table.class);
+        setHotKey(mySettingButton, this, Setting.class);
 //originally like to using tabHost implement, fail
         /*myTabHost = (TabHost)findViewById(R.id.tabHost);
         lam = new LocalActivityManager(this, false);
@@ -138,5 +143,15 @@ public class Infor extends ActionBarActivity {
                     }
                 }, birthdayYear, birthdayMonth, birthdayDay);
         dpd.show();
+    }
+
+    public void setHotKey(Button button, final Context packageContext, final Class cls){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent().setClass(packageContext, cls);
+                startActivity(intent);
+            }
+        });
     }
 }
