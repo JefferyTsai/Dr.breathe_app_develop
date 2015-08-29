@@ -47,6 +47,10 @@
             android:name=".Course_Table"
             android:label="@string/title_activity_course__table" >
         </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_main2" >
+        </activity>
     </application>
 
 </manifest>
